@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Faculte, promotion, Etudiant
+from .models import Faculte,promotion,Etudiant
 
 
 class FaculteSerial(serializers.ModelSerializer):
@@ -9,7 +9,6 @@ class FaculteSerial(serializers.ModelSerializer):
         "codeFac",
         "denomination_extact"        
         )
-
     
 class PromotionSerializer(serializers.ModelSerializer):
     model=promotion
@@ -20,8 +19,6 @@ class PromotionSerializer(serializers.ModelSerializer):
         "denomination_exact_Promo",
         "getFac"
         )
-
-
 class EtudiantSerial(serializers.ModelSerializer):
     model=Etudiant
     fields=(
